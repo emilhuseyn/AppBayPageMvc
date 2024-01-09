@@ -1,0 +1,26 @@
+﻿@using AppBayPageMvc.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@model Blog
+
+<div class="container">
+    <h1>Create Blog</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Name</label>
+            <input asp-for="Name" type="text" class="form-control" placeholder="Name">
+            <span asp-validation-for="Name" style="color:red"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label">Description</label>
+            <input asp-for="Description" type="text" class="form-control" placeholder="Description">
+            <span asp-validation-for="Description" style="color:red"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Icon" class="form-label">Icon</label>
+            <input asp-for="Icon" type="text" class="form-control" placeholder="Icon">
+            <span asp-validation-for="Icon" style="color:red"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
